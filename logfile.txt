@@ -1,0 +1,1696 @@
+2024-02-07 03:06:05,430 :: INFO :: Bluetooth connection started
+2024-02-07 03:06:05,447 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-07 03:07:55,985 :: INFO :: Bluetooth connection started
+2024-02-07 03:07:56,003 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-07 03:14:49,677 :: INFO :: Bluetooth connection started
+2024-02-07 03:14:49,695 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-07 03:15:06,485 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-07 03:23:35,907 :: INFO :: Bluetooth connection started
+2024-02-07 03:23:35,926 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-07 03:23:59,552 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-07 03:24:00,565 :: WARNING :: API Timeout
+2024-02-07 03:24:00,577 :: INFO :: Child Processes started
+2024-02-07 03:24:00,582 :: INFO :: Reconnection handler is watching...
+2024-02-07 03:24:00,620 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-07 03:24:00,622 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-07 03:24:00,623 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-07 03:24:10,797 :: DEBUG :: b'hi'
+2024-02-07 03:24:10,798 :: DEBUG :: Received from Android: hi
+2024-02-07 03:25:36,554 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-07 03:25:36,555 :: INFO :: Disconnected Bluetooth link
+2024-02-07 03:25:39,293 :: INFO :: Bluetooth connection started
+2024-02-07 03:25:39,310 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-07 03:25:44,545 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-07 03:25:45,558 :: WARNING :: API Timeout
+2024-02-07 03:25:45,570 :: INFO :: Child Processes started
+2024-02-07 03:25:45,576 :: INFO :: Reconnection handler is watching...
+2024-02-07 03:25:45,614 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-07 03:25:45,616 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-07 03:25:45,616 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-07 03:26:32,799 :: DEBUG :: b'test'
+2024-02-07 03:26:32,800 :: DEBUG :: Received from Android: test
+2024-02-07 03:28:24,045 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-07 03:28:24,046 :: INFO :: Disconnected Bluetooth link
+2024-02-07 03:28:26,011 :: INFO :: Bluetooth connection started
+2024-02-07 03:28:26,029 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-07 03:28:30,926 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-07 03:28:31,951 :: WARNING :: API Timeout
+2024-02-07 03:28:31,970 :: INFO :: Child Processes started
+2024-02-07 03:28:31,976 :: INFO :: Reconnection handler is watching...
+2024-02-07 03:28:32,056 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-07 03:28:32,057 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-07 03:28:32,058 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-07 03:30:28,302 :: DEBUG :: b'{"cat": "control", "value": "start"}'
+2024-02-07 03:30:28,304 :: DEBUG :: Received from Android: {"cat": "control", "value": "start"}
+2024-02-07 03:30:29,320 :: WARNING :: API Timeout
+2024-02-07 03:30:29,321 :: ERROR :: API is down! Start command aborted.
+2024-02-07 03:30:29,325 :: WARNING :: The command queue is empty, please set obstacles.
+2024-02-07 03:30:29,325 :: DEBUG :: Sent to Android: {"cat": "error", "value": "API is down, start command aborted."}
+2024-02-07 03:30:29,327 :: DEBUG :: Sent to Android: {"cat": "error", "value": "Command queue is empty, did you set obstacles?"}
+2024-02-07 03:34:08,804 :: ERROR :: Error receiving message from Android: [Errno 104] Connection reset by peer
+2024-02-07 03:34:08,806 :: DEBUG :: Event set: Android connection dropped
+2024-02-07 03:34:08,806 :: ERROR :: Android link is down!
+2024-02-07 03:34:08,807 :: DEBUG :: Killing android child processes
+2024-02-07 03:34:08,814 :: DEBUG :: Android child processes killed
+2024-02-07 03:34:08,815 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-07 03:34:08,816 :: INFO :: Disconnected Bluetooth link
+2024-02-07 03:34:08,817 :: INFO :: Bluetooth connection started
+2024-02-07 03:34:08,857 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-07 10:30:06,413 :: INFO :: Bluetooth connection started
+2024-02-07 10:30:06,433 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-07 10:31:06,714 :: INFO :: Bluetooth connection started
+2024-02-07 10:31:06,733 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-07 10:31:14,481 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-07 10:31:14,496 :: WARNING :: API Exception: HTTPConnectionPool(host='192.168.65.180', port=5000): Max retries exceeded with url: /status (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f99770e90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2024-02-07 10:31:14,508 :: INFO :: Child Processes started
+2024-02-07 10:31:14,511 :: INFO :: Reconnection handler is watching...
+2024-02-07 10:31:14,546 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-07 10:31:14,548 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-07 10:31:14,549 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-07 10:31:33,031 :: DEBUG :: b'test'
+2024-02-07 10:31:33,033 :: DEBUG :: Received from Android: test
+2024-02-07 10:32:22,402 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-07 10:32:22,404 :: INFO :: Disconnected Bluetooth link
+2024-02-07 10:37:25,742 :: INFO :: Bluetooth connection started
+2024-02-07 10:37:25,761 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-07 10:37:42,272 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-07 10:37:42,296 :: WARNING :: API Exception: HTTPConnectionPool(host='192.168.65.180', port=5000): Max retries exceeded with url: /status (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f92f20f50>: Failed to establish a new connection: [Errno 101] Network is unreachable'))
+2024-02-07 10:37:42,315 :: INFO :: Child Processes started
+2024-02-07 10:37:42,324 :: INFO :: Reconnection handler is watching...
+2024-02-07 10:37:42,384 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-07 10:37:42,386 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-07 10:37:42,387 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-07 10:38:11,044 :: DEBUG :: b'what is up\n'
+2024-02-07 10:38:11,045 :: DEBUG :: Received from Android: what is up
+2024-02-14 04:39:43,622 :: INFO :: Bluetooth connection started
+2024-02-14 04:39:43,679 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-14 04:40:05,498 :: INFO :: Bluetooth connection started
+2024-02-14 04:40:05,516 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-15 02:31:24,114 :: INFO :: Bluetooth connection started
+2024-02-15 02:31:24,145 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-15 02:31:53,462 :: INFO :: Bluetooth connection started
+2024-02-15 02:31:53,485 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-15 02:48:49,028 :: INFO :: Connected to STM32
+2024-02-15 02:48:49,148 :: DEBUG :: API is up!
+2024-02-15 02:48:49,160 :: INFO :: Child Processes started
+2024-02-15 02:49:32,484 :: INFO :: Connected to STM32
+2024-02-15 02:49:32,526 :: DEBUG :: API is up!
+2024-02-15 02:49:32,535 :: INFO :: Child Processes started
+2024-02-15 03:01:45,158 :: INFO :: Bluetooth connection started
+2024-02-15 03:01:45,178 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-15 03:02:33,789 :: INFO :: Bluetooth connection started
+2024-02-15 03:02:33,808 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:03:11,440 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 03:03:11,456 :: INFO :: Connected to STM32
+2024-02-15 03:03:11,498 :: DEBUG :: API is up!
+2024-02-15 03:03:11,517 :: INFO :: Child Processes started
+2024-02-15 03:03:11,521 :: INFO :: Reconnection handler is watching...
+2024-02-15 03:03:11,592 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 03:03:11,595 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 03:03:11,596 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 03:03:20,704 :: DEBUG :: b'juicer'
+2024-02-15 03:03:20,705 :: DEBUG :: Received from Android: juicer
+2024-02-15 03:03:57,533 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:03:57,535 :: INFO :: Disconnected Bluetooth link
+2024-02-15 03:03:57,536 :: INFO :: Disconnected from STM32
+2024-02-15 03:03:57,537 :: INFO :: Program exited!
+2024-02-15 03:04:04,811 :: INFO :: Bluetooth connection started
+2024-02-15 03:04:04,830 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:04:11,420 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 03:04:11,433 :: INFO :: Connected to STM32
+2024-02-15 03:04:11,495 :: DEBUG :: API is up!
+2024-02-15 03:04:11,516 :: INFO :: Child Processes started
+2024-02-15 03:04:11,522 :: INFO :: Reconnection handler is watching...
+2024-02-15 03:04:11,586 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 03:04:11,587 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 03:04:11,588 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 03:04:18,374 :: DEBUG :: b'f'
+2024-02-15 03:04:18,376 :: DEBUG :: Received from Android: f
+2024-02-15 03:05:36,763 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:05:36,764 :: INFO :: Disconnected Bluetooth link
+2024-02-15 03:05:36,765 :: INFO :: Disconnected from STM32
+2024-02-15 03:05:36,765 :: INFO :: Program exited!
+2024-02-15 03:05:43,020 :: INFO :: Bluetooth connection started
+2024-02-15 03:05:43,037 :: ERROR :: Error in Bluetooth link connection: [Errno 13] Permission denied
+2024-02-15 03:05:46,834 :: INFO :: Bluetooth connection started
+2024-02-15 03:05:46,852 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:05:54,002 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:05:54,003 :: ERROR :: Failed to disconnect Bluetooth link: 'NoneType' object has no attribute 'shutdown'
+2024-02-15 03:11:30,489 :: INFO :: Bluetooth connection started
+2024-02-15 03:11:30,508 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:11:38,929 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:11:38,930 :: ERROR :: Failed to disconnect Bluetooth link: 'NoneType' object has no attribute 'shutdown'
+2024-02-15 03:12:23,147 :: INFO :: Connected to STM32
+2024-02-15 03:13:05,711 :: INFO :: Connected to STM32
+2024-02-15 03:13:05,718 :: DEBUG :: Sent to STM32: FW01
+2024-02-15 03:14:13,288 :: INFO :: Connected to STM32
+2024-02-15 03:14:13,294 :: DEBUG :: Sent to STM32: FW01
+2024-02-15 03:14:43,967 :: INFO :: Connected to STM32
+2024-02-15 03:14:43,973 :: DEBUG :: Sent to STM32: FW--
+2024-02-15 03:15:16,245 :: INFO :: Connected to STM32
+2024-02-15 03:15:16,251 :: DEBUG :: Sent to STM32: FW--
+2024-02-15 03:16:59,284 :: INFO :: Connected to STM32
+2024-02-15 03:16:59,290 :: DEBUG :: Sent to STM32: FW--
+2024-02-15 03:17:37,488 :: INFO :: Connected to STM32
+2024-02-15 03:18:04,366 :: INFO :: Connected to STM32
+2024-02-15 03:18:21,230 :: INFO :: Connected to STM32
+2024-02-15 03:19:28,516 :: INFO :: Connected to STM32
+2024-02-15 03:19:28,522 :: DEBUG :: Sent to STM32: FW--
+2024-02-15 03:19:46,709 :: INFO :: Connected to STM32
+2024-02-15 03:19:46,715 :: DEBUG :: Sent to STM32: FW--
+2024-02-15 03:22:07,803 :: INFO :: Connected to STM32
+2024-02-15 03:22:07,811 :: DEBUG :: Sent to STM32: FORWARD
+2024-02-15 03:23:44,672 :: INFO :: Connected to STM32
+2024-02-15 03:23:44,679 :: DEBUG :: Sent to STM32: FORWARD
+2024-02-15 03:24:01,633 :: INFO :: Connected to STM32
+2024-02-15 03:24:01,640 :: DEBUG :: Sent to STM32: FORWARD
+2024-02-15 03:24:51,499 :: INFO :: Connected to STM32
+2024-02-15 03:24:51,506 :: DEBUG :: Sent to STM32: FORWARD
+2024-02-15 03:24:57,527 :: INFO :: Disconnected from STM32
+2024-02-15 03:25:09,980 :: INFO :: Connected to STM32
+2024-02-15 03:25:09,987 :: DEBUG :: Sent to STM32: FW--
+2024-02-15 03:25:25,588 :: INFO :: Disconnected from STM32
+2024-02-15 03:30:49,487 :: INFO :: Connected to STM32
+2024-02-15 03:30:49,493 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:31:06,907 :: INFO :: Disconnected from STM32
+2024-02-15 03:31:20,674 :: INFO :: Connected to STM32
+2024-02-15 03:31:20,681 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:31:20,682 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:31:40,332 :: INFO :: Disconnected from STM32
+2024-02-15 03:33:49,689 :: INFO :: Connected to STM32
+2024-02-15 03:33:49,697 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:49,697 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:49,697 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:49,698 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:49,698 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:54,560 :: INFO :: Disconnected from STM32
+2024-02-15 03:33:55,305 :: INFO :: Connected to STM32
+2024-02-15 03:33:55,312 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:55,312 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:55,312 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:55,313 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:33:55,313 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:03,917 :: INFO :: Disconnected from STM32
+2024-02-15 03:34:11,118 :: INFO :: Connected to STM32
+2024-02-15 03:34:11,126 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:11,126 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:11,127 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:11,127 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:11,127 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:20,626 :: INFO :: Disconnected from STM32
+2024-02-15 03:34:23,757 :: INFO :: Connected to STM32
+2024-02-15 03:34:23,764 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:23,764 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:23,764 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:23,765 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:23,765 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:26,239 :: INFO :: Disconnected from STM32
+2024-02-15 03:34:42,726 :: INFO :: Connected to STM32
+2024-02-15 03:34:42,733 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:42,733 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:42,734 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:42,734 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:34:42,734 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:38:01,925 :: INFO :: Disconnected from STM32
+2024-02-15 03:38:55,474 :: INFO :: Connected to STM32
+2024-02-15 03:38:55,485 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:38:55,486 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:38:55,487 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:38:55,488 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:38:55,488 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:33,225 :: INFO :: Disconnected from STM32
+2024-02-15 03:40:47,899 :: INFO :: Connected to STM32
+2024-02-15 03:40:47,906 :: DEBUG :: Sent to STM32: 2
+2024-02-15 03:40:47,907 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:47,907 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:47,908 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:47,908 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:52,391 :: INFO :: Disconnected from STM32
+2024-02-15 03:40:53,141 :: INFO :: Connected to STM32
+2024-02-15 03:40:53,149 :: DEBUG :: Sent to STM32: 2
+2024-02-15 03:40:53,149 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:53,149 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:53,150 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:53,150 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:40:55,918 :: INFO :: Disconnected from STM32
+2024-02-15 03:41:32,061 :: INFO :: Bluetooth connection started
+2024-02-15 03:41:32,080 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:41:40,517 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 03:41:40,528 :: INFO :: Connected to STM32
+2024-02-15 03:41:40,873 :: DEBUG :: API is up!
+2024-02-15 03:41:40,896 :: INFO :: Child Processes started
+2024-02-15 03:41:40,903 :: INFO :: Reconnection handler is watching...
+2024-02-15 03:41:40,977 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 03:41:40,979 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 03:41:40,979 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 03:41:55,817 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:41:55,819 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:03,243 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:03,244 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:04,317 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:04,318 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:04,507 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:04,508 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:06,249 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:06,250 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:06,414 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:06,415 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:06,603 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:06,604 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:06,774 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:06,775 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:06,941 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:06,941 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:07,132 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:07,132 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:07,302 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:07,302 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:07,467 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:42:07,467 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:42:28,527 :: DEBUG :: b'b'
+2024-02-15 03:42:28,527 :: DEBUG :: Received from Android: b
+2024-02-15 03:42:34,323 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:42:34,324 :: INFO :: Disconnected Bluetooth link
+2024-02-15 03:42:34,325 :: INFO :: Disconnected from STM32
+2024-02-15 03:42:34,325 :: INFO :: Program exited!
+2024-02-15 03:45:18,165 :: INFO :: Bluetooth connection started
+2024-02-15 03:45:18,183 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:45:37,115 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 03:45:37,126 :: INFO :: Connected to STM32
+2024-02-15 03:45:37,464 :: DEBUG :: API is up!
+2024-02-15 03:45:37,488 :: INFO :: Child Processes started
+2024-02-15 03:45:37,494 :: INFO :: Reconnection handler is watching...
+2024-02-15 03:45:37,573 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 03:45:37,574 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 03:45:37,575 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 03:45:44,020 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:45:44,022 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:45:54,912 :: DEBUG :: b'b'
+2024-02-15 03:45:54,913 :: DEBUG :: Received from Android: b
+2024-02-15 03:46:04,557 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:46:04,558 :: INFO :: Disconnected Bluetooth link
+2024-02-15 03:46:04,559 :: INFO :: Disconnected from STM32
+2024-02-15 03:46:04,560 :: INFO :: Program exited!
+2024-02-15 03:50:43,136 :: INFO :: Bluetooth connection started
+2024-02-15 03:50:43,154 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:51:11,918 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 03:51:11,928 :: INFO :: Connected to STM32
+2024-02-15 03:51:12,218 :: DEBUG :: API is up!
+2024-02-15 03:51:12,240 :: INFO :: Child Processes started
+2024-02-15 03:51:12,247 :: INFO :: Reconnection handler is watching...
+2024-02-15 03:51:12,287 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 03:51:12,289 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 03:51:12,291 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 03:51:19,645 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:51:19,647 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:51:31,232 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:51:31,234 :: INFO :: Disconnected Bluetooth link
+2024-02-15 03:51:31,235 :: INFO :: Disconnected from STM32
+2024-02-15 03:51:31,235 :: INFO :: Program exited!
+2024-02-15 03:55:59,398 :: INFO :: Bluetooth connection started
+2024-02-15 03:55:59,418 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:56:06,806 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 03:56:06,818 :: INFO :: Connected to STM32
+2024-02-15 03:56:07,001 :: DEBUG :: API is up!
+2024-02-15 03:56:07,026 :: INFO :: Child Processes started
+2024-02-15 03:56:07,034 :: INFO :: Reconnection handler is watching...
+2024-02-15 03:56:07,109 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 03:56:07,111 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 03:56:07,112 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 03:56:10,797 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:10,799 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:16,068 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:56:16,069 :: INFO :: Disconnected Bluetooth link
+2024-02-15 03:56:16,070 :: INFO :: Disconnected from STM32
+2024-02-15 03:56:16,070 :: INFO :: Program exited!
+2024-02-15 03:56:23,670 :: INFO :: Bluetooth connection started
+2024-02-15 03:56:23,690 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 03:56:40,473 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 03:56:40,488 :: INFO :: Connected to STM32
+2024-02-15 03:56:40,970 :: DEBUG :: API is up!
+2024-02-15 03:56:40,995 :: INFO :: Child Processes started
+2024-02-15 03:56:41,002 :: INFO :: Reconnection handler is watching...
+2024-02-15 03:56:41,064 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 03:56:41,066 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 03:56:41,067 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 03:56:43,308 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:43,309 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:43,310 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:43,310 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:43,310 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:43,311 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:43,311 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:43,311 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:43,311 :: INFO :: Movement sent
+2024-02-15 03:56:46,741 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:46,741 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:46,742 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:46,742 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:46,743 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:46,743 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:46,744 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:46,744 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:46,745 :: INFO :: Movement sent
+2024-02-15 03:56:48,753 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:48,754 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:48,755 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:48,755 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:48,756 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:48,756 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:48,756 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:48,757 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:48,757 :: INFO :: Movement sent
+2024-02-15 03:56:48,999 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:49,000 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:49,001 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:49,001 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,001 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,002 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,002 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,003 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,003 :: INFO :: Movement sent
+2024-02-15 03:56:49,494 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:49,495 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:49,496 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:49,496 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,497 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,497 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,497 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,498 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:49,499 :: INFO :: Movement sent
+2024-02-15 03:56:50,074 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:50,075 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:50,075 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:50,076 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:50,076 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:50,077 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:50,077 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:50,077 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:50,078 :: INFO :: Movement sent
+2024-02-15 03:56:51,624 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:51,625 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:51,625 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:51,626 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,626 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,627 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,627 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,627 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,628 :: INFO :: Movement sent
+2024-02-15 03:56:51,821 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:51,821 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:51,822 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:51,823 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,823 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,824 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,824 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,824 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:51,825 :: INFO :: Movement sent
+2024-02-15 03:56:52,036 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:56:52,036 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:56:52,037 :: INFO :: Sending forward movement for fun
+2024-02-15 03:56:52,037 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:52,038 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:52,038 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:52,039 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:52,039 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:56:52,040 :: INFO :: Movement sent
+2024-02-15 03:57:16,058 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:57:16,059 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:57:16,060 :: INFO :: Sending forward movement for fun
+2024-02-15 03:57:16,060 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:16,061 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:16,061 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:16,062 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:16,062 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:16,063 :: INFO :: Movement sent
+2024-02-15 03:57:56,650 :: DEBUG :: b'{"cat": "info", "value": "11111"}'
+2024-02-15 03:57:56,650 :: DEBUG :: Received from Android: {"cat": "info", "value": "11111"}
+2024-02-15 03:57:56,651 :: INFO :: Sending forward movement for fun
+2024-02-15 03:57:56,651 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:56,652 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:56,652 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:56,653 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:56,653 :: DEBUG :: Sent to STM32: 1
+2024-02-15 03:57:56,654 :: INFO :: Movement sent
+2024-02-15 03:58:00,895 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 03:58:00,896 :: INFO :: Disconnected Bluetooth link
+2024-02-15 03:58:00,897 :: INFO :: Disconnected from STM32
+2024-02-15 03:58:00,898 :: INFO :: Program exited!
+2024-02-15 04:08:52,328 :: INFO :: Connected to STM32
+2024-02-15 04:08:52,336 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:08:52,337 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:08:52,337 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:08:52,337 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:08:52,337 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:08:52,339 :: DEBUG :: Received from STM32: ACK|
+2024-02-15 04:10:56,607 :: INFO :: Connected to STM32
+2024-02-15 04:10:56,614 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:10:56,615 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:10:56,615 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:10:56,616 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:10:56,616 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:10:56,617 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:34:02,843 :: INFO :: Connected to STM32
+2024-02-15 04:34:02,852 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:34:02,853 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:34:02,853 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:34:02,854 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:34:02,854 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:34:02,856 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:36:50,234 :: INFO :: Connected to STM32
+2024-02-15 04:36:50,242 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:36:50,243 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:36:50,243 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:36:50,243 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:36:50,243 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:36:50,245 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:37:07,075 :: INFO :: Connected to STM32
+2024-02-15 04:37:07,083 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:37:07,083 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:37:07,084 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:37:07,085 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:37:07,085 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:37:07,086 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:37:20,912 :: INFO :: Connected to STM32
+2024-02-15 04:37:20,920 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:37:20,921 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:37:20,921 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:37:20,922 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:37:20,922 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:37:20,923 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:38:08,670 :: INFO :: Connected to STM32
+2024-02-15 04:38:08,677 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:38:08,678 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:38:08,678 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:38:08,679 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:38:08,679 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:38:08,680 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:38:08,681 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:41:43,981 :: INFO :: Connected to STM32
+2024-02-15 04:41:43,988 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:41:43,988 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:41:43,989 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:41:43,989 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:41:43,990 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:41:43,991 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:42:02,762 :: INFO :: Connected to STM32
+2024-02-15 04:42:02,770 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:02,771 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:02,771 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:02,771 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:02,771 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:02,773 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:42:24,346 :: INFO :: Connected to STM32
+2024-02-15 04:42:24,354 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:42:24,355 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:24,355 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:24,355 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:24,356 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:42:24,357 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:43:10,654 :: INFO :: Connected to STM32
+2024-02-15 04:43:10,662 :: DEBUG :: Sent to STM32: L
+2024-02-15 04:43:10,663 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:43:10,663 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:43:10,663 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:43:10,663 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:43:10,665 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:43:33,026 :: INFO :: Connected to STM32
+2024-02-15 04:43:33,034 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:43:33,035 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:43:33,035 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:43:33,035 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:43:33,035 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:43:33,037 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:44:07,270 :: INFO :: Connected to STM32
+2024-02-15 04:44:07,278 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:44:07,279 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:07,279 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:07,279 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:07,280 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:07,281 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:44:10,760 :: INFO :: Connected to STM32
+2024-02-15 04:44:10,767 :: DEBUG :: Sent to STM32: T
+2024-02-15 04:44:10,767 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:10,768 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:10,768 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:10,769 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:10,770 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:44:19,184 :: INFO :: Connected to STM32
+2024-02-15 04:44:19,192 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:19,193 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:19,193 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:19,193 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:19,193 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:44:19,195 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:45:27,201 :: INFO :: Connected to STM32
+2024-02-15 04:45:27,208 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:45:27,208 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:45:27,209 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:45:27,209 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:45:27,209 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:45:27,211 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:47:05,712 :: INFO :: Connected to STM32
+2024-02-15 04:47:05,719 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:47:05,720 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:47:05,720 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:47:05,721 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:47:05,721 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:47:05,723 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:47:49,530 :: INFO :: Connected to STM32
+2024-02-15 04:47:49,537 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:47:49,538 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:47:49,538 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:47:49,539 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:47:49,539 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:47:49,540 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:48:15,228 :: INFO :: Connected to STM32
+2024-02-15 04:48:15,236 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:48:15,236 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:15,237 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:15,237 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:15,237 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:15,239 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:48:16,238 :: DEBUG :: Sent to STM32: L
+2024-02-15 04:48:16,238 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:16,238 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:16,239 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:16,239 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:16,240 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 04:48:57,051 :: INFO :: Connected to STM32
+2024-02-15 04:48:57,058 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:48:57,059 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:57,059 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:57,059 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:57,060 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:48:57,061 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:49:02,060 :: DEBUG :: Sent to STM32: L
+2024-02-15 04:49:02,061 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:49:02,061 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:49:02,062 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:49:02,062 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:49:02,064 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 04:50:30,601 :: INFO :: Bluetooth connection started
+2024-02-15 04:50:30,629 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 04:50:41,971 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 04:50:41,985 :: INFO :: Connected to STM32
+2024-02-15 04:50:43,010 :: WARNING :: API Timeout
+2024-02-15 04:50:43,031 :: INFO :: Child Processes started
+2024-02-15 04:50:43,044 :: INFO :: Reconnection handler is watching...
+2024-02-15 04:50:43,129 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 04:50:43,130 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 04:50:43,131 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 04:50:50,500 :: DEBUG :: b'hello'
+2024-02-15 04:50:50,501 :: DEBUG :: Received from Android: hello
+2024-02-15 04:51:14,091 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 04:51:14,092 :: INFO :: Disconnected Bluetooth link
+2024-02-15 04:51:14,093 :: INFO :: Disconnected from STM32
+2024-02-15 04:51:14,093 :: INFO :: Program exited!
+2024-02-15 04:51:56,149 :: INFO :: Connected to STM32
+2024-02-15 04:51:56,157 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:51:56,157 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:51:56,158 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:51:56,158 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:51:56,158 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:51:56,160 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:52:01,159 :: DEBUG :: Sent to STM32: L
+2024-02-15 04:52:01,160 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:52:01,161 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:52:01,161 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:52:01,162 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:52:01,163 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 04:53:00,612 :: INFO :: Connected to STM32
+2024-02-15 04:53:00,619 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:53:00,620 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:53:00,620 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:53:00,620 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:53:00,621 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:53:00,622 :: DEBUG :: Received from STM32:  CK
+2024-02-15 04:53:05,622 :: DEBUG :: Sent to STM32: L
+2024-02-15 04:53:05,623 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:53:05,623 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:53:05,625 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:53:05,626 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:53:05,627 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:53:29,932 :: INFO :: Disconnected from STM32
+2024-02-15 04:54:03,314 :: INFO :: Connected to STM32
+2024-02-15 04:54:03,321 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:54:03,322 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:54:03,322 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:54:03,323 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:54:03,323 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:54:03,324 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:54:08,324 :: DEBUG :: Sent to STM32: L
+2024-02-15 04:54:08,325 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:54:08,325 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:54:08,326 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:54:08,326 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:54:08,328 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 04:55:08,872 :: INFO :: Connected to STM32
+2024-02-15 04:55:08,882 :: DEBUG :: Sent to STM32: R
+2024-02-15 04:55:08,882 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:55:08,883 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:55:08,883 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:55:08,883 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:55:08,885 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:55:13,884 :: DEBUG :: Sent to STM32: L
+2024-02-15 04:55:13,885 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:55:13,885 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:55:13,886 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:55:13,886 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:55:13,888 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 04:56:21,187 :: INFO :: Connected to STM32
+2024-02-15 04:56:21,195 :: DEBUG :: Sent to STM32: S
+2024-02-15 04:56:21,196 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:21,196 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:21,196 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:21,196 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:21,198 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:56:33,474 :: INFO :: Connected to STM32
+2024-02-15 04:56:33,481 :: DEBUG :: Sent to STM32: S
+2024-02-15 04:56:33,482 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:33,482 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:33,482 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:33,483 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:33,484 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:56:35,993 :: INFO :: Disconnected from STM32
+2024-02-15 04:56:52,384 :: INFO :: Connected to STM32
+2024-02-15 04:56:52,392 :: DEBUG :: Sent to STM32: S
+2024-02-15 04:56:52,392 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:52,393 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:52,393 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:52,393 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:52,394 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:56:56,693 :: INFO :: Disconnected from STM32
+2024-02-15 04:56:58,460 :: INFO :: Connected to STM32
+2024-02-15 04:56:58,467 :: DEBUG :: Sent to STM32: S
+2024-02-15 04:56:58,468 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:58,468 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:58,468 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:58,469 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:56:58,470 :: DEBUG :: Received from STM32: ACK
+2024-02-15 04:57:10,259 :: INFO :: Connected to STM32
+2024-02-15 04:57:10,265 :: DEBUG :: Sent to STM32: S
+2024-02-15 04:57:10,266 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:57:10,266 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:57:10,267 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:57:10,267 :: DEBUG :: Sent to STM32: F
+2024-02-15 04:57:10,268 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:00:21,687 :: INFO :: Connected to STM32
+2024-02-15 05:00:21,695 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:21,696 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:21,696 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:21,696 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:21,697 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:21,698 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:00:31,697 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:31,698 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:31,699 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:31,699 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:31,699 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:31,701 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:00:43,175 :: INFO :: Connected to STM32
+2024-02-15 05:00:43,182 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:43,183 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:43,183 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:43,184 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:43,184 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:43,185 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:00:53,185 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:00:53,186 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:53,186 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:53,187 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:53,187 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:00:53,188 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:01:07,482 :: INFO :: Connected to STM32
+2024-02-15 05:01:07,489 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:01:07,489 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:01:07,490 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:01:07,490 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:01:07,490 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:01:07,492 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:01:17,491 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:01:17,492 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:01:17,493 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:01:17,493 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:01:17,494 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:01:17,495 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:03:42,301 :: INFO :: Connected to STM32
+2024-02-15 05:03:42,308 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:03:42,308 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:03:42,309 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:03:42,309 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:03:42,309 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:03:42,311 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:03:50,986 :: INFO :: Disconnected from STM32
+2024-02-15 05:04:03,419 :: INFO :: Connected to STM32
+2024-02-15 05:04:03,426 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:04:03,427 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:03,427 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:03,428 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:03,429 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:03,430 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:04:07,122 :: INFO :: Disconnected from STM32
+2024-02-15 05:04:18,454 :: INFO :: Connected to STM32
+2024-02-15 05:04:18,462 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:04:18,462 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:18,463 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:18,463 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:18,463 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:18,464 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:04:28,464 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:04:28,464 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:04:28,465 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:04:28,466 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:04:28,466 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:04:28,467 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:08:16,629 :: INFO :: Connected to STM32
+2024-02-15 05:08:17,636 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:08:17,637 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:17,637 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:17,638 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:17,638 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:17,639 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:08:27,638 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:27,639 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:08:27,640 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:08:27,641 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:08:27,641 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:08:27,643 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:08:58,929 :: INFO :: Connected to STM32
+2024-02-15 05:08:59,936 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:08:59,937 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:59,937 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:59,937 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:59,937 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:08:59,938 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:09:09,938 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:09:09,939 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:09:09,939 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:09:09,940 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:09:09,940 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:09:09,942 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:11:48,441 :: INFO :: Connected to STM32
+2024-02-15 05:11:49,448 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:11:49,449 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:11:49,449 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:11:49,449 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:11:49,449 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:11:49,451 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:11:59,450 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:11:59,451 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:11:59,451 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:11:59,452 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:11:59,452 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:11:59,454 :: DEBUG :: Received from STM32:  ACK
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   2024-02-15 05:15:07,063 :: INFO :: Connected to STM32
+2024-02-15 05:15:08,073 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:15:08,073 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:08,074 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:08,074 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:08,074 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:08,075 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:15:18,075 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:18,076 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:15:18,077 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:15:18,077 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:15:18,078 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:15:18,079 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:15:47,954 :: INFO :: Connected to STM32
+2024-02-15 05:15:48,961 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:15:48,962 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:48,962 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:48,962 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:48,962 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:15:48,964 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:16:10,963 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:16:10,964 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:10,964 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:10,965 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:10,965 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:10,967 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:16:31,241 :: INFO :: Connected to STM32
+2024-02-15 05:16:32,249 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:32,250 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:16:32,250 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:16:32,250 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:16:32,251 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:16:32,252 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:16:52,251 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:16:52,253 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:52,253 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:52,254 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:52,255 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:16:52,256 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:17:33,367 :: INFO :: Connected to STM32
+2024-02-15 05:17:34,375 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:17:34,375 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:17:34,376 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:17:34,376 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:17:34,376 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:17:34,377 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:17:55,377 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:17:55,377 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:17:55,378 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:17:55,378 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:17:55,379 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:17:55,380 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:18:29,904 :: INFO :: Connected to STM32
+2024-02-15 05:18:30,911 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:18:30,912 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:18:30,912 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:18:30,912 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:18:30,912 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:18:30,914 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:18:51,913 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:18:51,914 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:18:51,914 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:18:51,915 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:18:51,915 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:18:51,916 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:20:49,026 :: INFO :: Connected to STM32
+2024-02-15 05:20:50,033 :: DEBUG :: Sent to STM32: L
+2024-02-15 05:20:50,034 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:20:50,035 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:20:50,035 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:20:50,035 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:20:50,036 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:20:54,422 :: INFO :: Disconnected from STM32
+2024-02-15 05:21:24,368 :: INFO :: Connected to STM32
+2024-02-15 05:21:25,375 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:21:25,376 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:21:25,376 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:21:25,377 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:21:25,377 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:21:25,378 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:21:26,061 :: INFO :: Disconnected from STM32
+2024-02-15 05:21:37,245 :: INFO :: Connected to STM32
+2024-02-15 05:21:38,252 :: DEBUG :: Sent to STM32: L
+2024-02-15 05:21:38,252 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:21:38,252 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:21:38,253 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:21:38,253 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:21:38,254 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:21:48,253 :: DEBUG :: Sent to STM32: T
+2024-02-15 05:21:48,254 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:21:48,255 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:21:48,255 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:21:48,256 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:21:48,257 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:22:18,918 :: INFO :: Connected to STM32
+2024-02-15 05:22:19,925 :: DEBUG :: Sent to STM32: L
+2024-02-15 05:22:19,926 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:22:19,926 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:22:19,926 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:22:19,927 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:22:19,928 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:22:29,927 :: DEBUG :: Sent to STM32: T
+2024-02-15 05:22:29,928 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:22:29,929 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:22:29,929 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:22:29,929 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:22:29,931 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:22:46,213 :: INFO :: Connected to STM32
+2024-02-15 05:22:47,219 :: DEBUG :: Sent to STM32: L
+2024-02-15 05:22:47,220 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:22:47,220 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:22:47,220 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:22:47,221 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:22:47,222 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:22:57,221 :: DEBUG :: Sent to STM32: T
+2024-02-15 05:22:57,222 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:22:57,222 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:22:57,223 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:22:57,223 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:22:57,225 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:23:04,816 :: INFO :: Connected to STM32
+2024-02-15 05:23:05,823 :: DEBUG :: Sent to STM32: L
+2024-02-15 05:23:05,823 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:23:05,824 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:23:05,824 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:23:05,824 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:23:05,825 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:23:15,825 :: DEBUG :: Sent to STM32: T
+2024-02-15 05:23:15,826 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:23:15,826 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:23:15,827 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:23:15,827 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:23:15,829 :: DEBUG :: Received from STM32:  ACK
+2024-02-15 05:40:47,514 :: INFO :: Bluetooth connection started
+2024-02-15 05:40:47,542 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 05:40:54,576 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 05:40:54,591 :: INFO :: Connected to STM32
+2024-02-15 05:40:55,622 :: WARNING :: API Timeout
+2024-02-15 05:40:55,642 :: INFO :: Child Processes started
+2024-02-15 05:40:55,650 :: INFO :: Reconnection handler is watching...
+2024-02-15 05:40:55,740 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 05:40:55,741 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 05:40:55,742 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 05:41:01,881 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:01,883 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:04,707 :: DEBUG :: b'{"cat": "info", "value": "RRRRR"}'
+2024-02-15 05:41:04,707 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRRRR"}
+2024-02-15 05:41:10,294 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:10,295 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:11,694 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:11,695 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:12,519 :: DEBUG :: b'{"cat": "info", "value": "LLLLL"}'
+2024-02-15 05:41:12,520 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLLLL"}
+2024-02-15 05:41:19,700 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:19,701 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:20,719 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:20,720 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:23,459 :: DEBUG :: b'{"cat": "info", "value": "BBBBB"}'
+2024-02-15 05:41:23,460 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBBBB"}
+2024-02-15 05:41:24,751 :: DEBUG :: b'{"cat": "info", "value": "BBBBB"}'
+2024-02-15 05:41:24,754 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBBBB"}
+2024-02-15 05:41:25,506 :: DEBUG :: b'{"cat": "info", "value": "BBBBB"}'
+2024-02-15 05:41:25,506 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBBBB"}
+2024-02-15 05:41:25,918 :: DEBUG :: b'{"cat": "info", "value": "BBBBB"}'
+2024-02-15 05:41:25,919 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBBBB"}
+2024-02-15 05:41:26,757 :: DEBUG :: b'{"cat": "info", "value": "RRRRR"}'
+2024-02-15 05:41:26,757 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRRRR"}
+2024-02-15 05:41:28,577 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:28,577 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:29,078 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:29,079 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:29,472 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:29,472 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:29,928 :: DEBUG :: b'{"cat": "info", "value": "LLLLL"}'
+2024-02-15 05:41:29,934 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLLLL"}
+2024-02-15 05:41:30,362 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:30,362 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:30,691 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:30,691 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:30,933 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:30,934 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:31,222 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:31,222 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:31,543 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:31,544 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:32,072 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:32,072 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:32,484 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:32,485 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:36,432 :: DEBUG :: b'{"cat": "info", "value": "BBBBB"}'
+2024-02-15 05:41:36,432 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBBBB"}
+2024-02-15 05:41:36,907 :: DEBUG :: b'{"cat": "info", "value": "BBBBB"}'
+2024-02-15 05:41:36,908 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBBBB"}
+2024-02-15 05:41:39,366 :: DEBUG :: b'{"cat": "info", "value": "BBBBB"}'
+2024-02-15 05:41:39,366 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBBBB"}
+2024-02-15 05:41:40,608 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:40,609 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:45,174 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:45,175 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:46,709 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:46,710 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:41:48,245 :: DEBUG :: b'{"cat": "info", "value": "FFFFF"}'
+2024-02-15 05:41:48,245 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFFFF"}
+2024-02-15 05:45:17,305 :: INFO :: Bluetooth connection started
+2024-02-15 05:45:17,348 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 05:45:31,242 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 05:45:31,256 :: INFO :: Connected to STM32
+2024-02-15 05:45:32,273 :: WARNING :: API Timeout
+2024-02-15 05:45:32,288 :: INFO :: Child Processes started
+2024-02-15 05:45:32,291 :: INFO :: Reconnection handler is watching...
+2024-02-15 05:45:32,346 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 05:45:32,347 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 05:45:32,348 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 05:46:05,125 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:46:05,127 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:46:08,167 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:46:08,168 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:46:12,078 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:46:12,079 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:46:12,274 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:46:12,275 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:46:13,728 :: DEBUG :: b'{"cat": "info", "value": "LLL10"}'
+2024-02-15 05:46:13,729 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLL10"}
+2024-02-15 05:46:13,926 :: DEBUG :: b'{"cat": "info", "value": "LLL10"}'
+2024-02-15 05:46:13,926 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLL10"}
+2024-02-15 05:46:14,123 :: DEBUG :: b'{"cat": "info", "value": "LLL10"}'
+2024-02-15 05:46:14,124 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLL10"}
+2024-02-15 05:46:14,561 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:46:14,561 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:46:14,786 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:46:14,787 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:46:14,941 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:46:14,941 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:46:15,353 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:46:15,354 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:46:15,526 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:46:15,526 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:46:15,726 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:46:15,726 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:46:15,903 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:46:15,904 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:46:16,103 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:46:16,104 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:46:16,284 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:46:16,285 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:46:26,902 :: DEBUG :: b'toilet '
+2024-02-15 05:46:26,903 :: DEBUG :: Received from Android: toilet
+2024-02-15 05:46:49,375 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 05:46:49,377 :: INFO :: Disconnected Bluetooth link
+2024-02-15 05:46:49,378 :: INFO :: Disconnected from STM32
+2024-02-15 05:46:49,378 :: INFO :: Program exited!
+2024-02-15 05:46:52,665 :: INFO :: Bluetooth connection started
+2024-02-15 05:46:52,684 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 05:47:00,376 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 05:47:00,386 :: INFO :: Connected to STM32
+2024-02-15 05:47:01,398 :: WARNING :: API Timeout
+2024-02-15 05:47:01,412 :: INFO :: Child Processes started
+2024-02-15 05:47:01,418 :: INFO :: Reconnection handler is watching...
+2024-02-15 05:47:01,456 :: ERROR :: Error receiving message from Android: [Errno 104] Connection reset by peer
+2024-02-15 05:47:01,461 :: DEBUG :: Event set: Android connection dropped
+2024-02-15 05:47:01,461 :: ERROR :: Android link is down!
+2024-02-15 05:47:01,461 :: DEBUG :: Killing android child processes
+2024-02-15 05:47:01,464 :: DEBUG :: Android child processes killed
+2024-02-15 05:47:01,464 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 05:47:01,465 :: INFO :: Disconnected Bluetooth link
+2024-02-15 05:47:01,465 :: INFO :: Bluetooth connection started
+2024-02-15 05:47:01,490 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 05:47:21,293 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 05:47:21,302 :: INFO :: Android child processes restarted
+2024-02-15 05:47:21,349 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 05:47:21,352 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 05:47:21,354 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 05:47:21,356 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are reconnected!"}
+2024-02-15 05:47:21,357 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 05:48:43,525 :: DEBUG :: b'{"cat": "info", "value" : " hi"}'
+2024-02-15 05:48:43,526 :: DEBUG :: Received from Android: {"cat": "info", "value" : " hi"}
+2024-02-15 05:48:48,060 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:48:48,060 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:48:58,213 :: INFO :: Connected to STM32
+2024-02-15 05:49:03,324 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:49:03,324 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:49:03,329 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}{"cat": "info", "value": "BBB10"}{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:49:03,330 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}{"cat": "info", "value": "BBB10"}{"cat": "info", "value": "BBB10"}
+2024-02-15 05:49:11,625 :: DEBUG :: Disconnecting Bluetooth link
+2024-02-15 05:49:11,626 :: INFO :: Disconnected Bluetooth link
+2024-02-15 05:49:11,627 :: INFO :: Disconnected from STM32
+2024-02-15 05:49:11,627 :: INFO :: Program exited!
+2024-02-15 05:49:13,758 :: INFO :: Bluetooth connection started
+2024-02-15 05:49:13,776 :: INFO :: Awaiting Bluetooth connection on RFCOMM CHANNEL 1
+2024-02-15 05:49:48,162 :: INFO :: Accepted connection from: ('48:61:EE:2A:AA:30', 1)
+2024-02-15 05:49:48,171 :: INFO :: Connected to STM32
+2024-02-15 05:49:49,183 :: WARNING :: API Timeout
+2024-02-15 05:49:49,206 :: INFO :: Child Processes started
+2024-02-15 05:49:49,211 :: INFO :: Reconnection handler is watching...
+2024-02-15 05:49:49,283 :: DEBUG :: Sent to Android: {"cat": "info", "value": "You are connected to the RPi!"}
+2024-02-15 05:49:49,285 :: DEBUG :: Sent to Android: {"cat": "info", "value": "Robot is ready!"}
+2024-02-15 05:49:49,286 :: DEBUG :: Sent to Android: {"cat": "mode", "value": "path"}
+2024-02-15 05:49:55,794 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:49:55,795 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:49:59,593 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:49:59,594 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:00,483 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:00,483 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:01,042 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:01,042 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:02,742 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:02,743 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:02,922 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:02,923 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:03,059 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:03,060 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:03,219 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:03,220 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:03,377 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:03,378 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:04,162 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:04,163 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:04,353 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:04,354 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:04,490 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:04,491 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:04,644 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:04,645 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:04,788 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:04,789 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:04,935 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:04,936 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:05,284 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:05,285 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:05,454 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:05,455 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:05,603 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:05,608 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:05,767 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:05,767 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:06,800 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:06,801 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:06,965 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:06,966 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:07,147 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:07,147 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:07,328 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:07,328 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:07,509 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:07,509 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:07,685 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:07,686 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:07,839 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:07,839 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:08,022 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:08,022 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:08,203 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:08,203 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:08,368 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:08,368 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:08,565 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:08,566 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:08,749 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:08,749 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:08,913 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:08,913 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:09,097 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:09,097 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:09,275 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:09,276 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:09,458 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:09,458 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:09,658 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:09,658 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:09,825 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:09,826 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:10,022 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:10,022 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:10,208 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:10,209 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:10,380 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:10,381 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:10,554 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:10,555 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:10,723 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:10,724 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:10,893 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:10,894 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:11,080 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:11,081 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:11,272 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:11,272 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:11,454 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:11,455 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:11,645 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:11,646 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:11,825 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:11,826 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:12,014 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:12,015 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:12,205 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:12,206 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:12,394 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:12,395 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:12,592 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:12,592 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:12,823 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:12,824 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:13,007 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:13,007 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:13,191 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:13,191 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:13,385 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:13,386 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:13,565 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:13,566 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:13,764 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:13,765 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:13,954 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:13,955 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:14,137 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:14,137 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:15,129 :: INFO :: Connected to STM32
+2024-02-15 05:50:15,318 :: DEBUG :: b'{"cat": "info", "value": "LLL10"}'
+2024-02-15 05:50:15,318 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLL10"}
+2024-02-15 05:50:16,282 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:16,282 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:17,462 :: DEBUG :: b'{"cat": "info", "value": "LLL10"}'
+2024-02-15 05:50:17,462 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLL10"}
+2024-02-15 05:50:17,640 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:17,641 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:17,823 :: DEBUG :: b'{"cat": "info", "value": "LLL10"}'
+2024-02-15 05:50:17,823 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLL10"}
+2024-02-15 05:50:17,998 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:17,998 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:18,312 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:18,312 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:19,783 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:19,783 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:19,963 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:19,963 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:20,173 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:20,174 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:20,308 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:20,309 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:20,473 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:20,474 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:20,644 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:20,645 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:20,823 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:20,824 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:21,002 :: DEBUG :: b'{"cat": "info", "value": "RRR10"}'
+2024-02-15 05:50:21,002 :: DEBUG :: Received from Android: {"cat": "info", "value": "RRR10"}
+2024-02-15 05:50:21,279 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:21,280 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:21,488 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:21,489 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:21,834 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:21,835 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:22,032 :: DEBUG :: b'{"cat": "info", "value": "FFF10"}'
+2024-02-15 05:50:22,032 :: DEBUG :: Received from Android: {"cat": "info", "value": "FFF10"}
+2024-02-15 05:50:23,419 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:23,420 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:23,631 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:23,631 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:23,829 :: DEBUG :: b'{"cat": "info", "value": "BBB10"}'
+2024-02-15 05:50:23,830 :: DEBUG :: Received from Android: {"cat": "info", "value": "BBB10"}
+2024-02-15 05:50:24,178 :: DEBUG :: b'{"cat": "info", "value": "LLL10"}'
+2024-02-15 05:50:24,179 :: DEBUG :: Received from Android: {"cat": "info", "value": "LLL10"}
+2024-02-15 05:52:38,033 :: INFO :: Connected to STM32
+2024-02-15 05:52:39,040 :: DEBUG :: Sent to STM32: L
+2024-02-15 05:52:39,041 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:52:39,041 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:52:39,041 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:52:39,041 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:52:39,043 :: DEBUG :: Received from STM32: ACK
+2024-02-15 05:52:48,166 :: INFO :: Disconnected from STM32
+2024-02-15 05:52:50,870 :: INFO :: Connected to STM32
+2024-02-15 05:52:51,877 :: DEBUG :: Sent to STM32: L
+2024-02-15 05:52:51,877 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:52:51,877 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:52:51,878 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:52:51,878 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:52:51,879 :: DEBUG :: Received from STM32: AK
+2024-02-15 05:53:05,576 :: INFO :: Disconnected from STM32
+2024-02-15 05:53:49,478 :: INFO :: Connected to STM32
+2024-02-15 05:53:50,485 :: DEBUG :: Sent to STM32: L
+2024-02-15 05:53:50,486 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:53:50,486 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:53:50,487 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:53:50,487 :: DEBUG :: Sent to STM32: F
+2024-02-15 05:53:50,488 :: DEBUG :: Received from STM32:  C ACK
+2024-02-15 05:53:50,489 :: WARNING :: Ignored unknown message from STM:  C ACK
+2024-02-15 05:54:02,788 :: DEBUG :: Sent to STM32: T
+2024-02-15 05:54:02,789 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:54:02,789 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:54:02,790 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:54:02,790 :: DEBUG :: Sent to STM32: S
+2024-02-15 05:54:02,791 :: DEBUG :: Received from STM32: AC
+2024-02-15 05:54:02,792 :: WARNING :: Ignored unknown message from STM: AC
+2024-02-21 00:53:49,039 :: INFO :: Connected to STM32
+2024-02-21 00:53:50,049 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:53:50,050 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:53:50,050 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:53:50,050 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:53:50,050 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:53:50,056 :: DEBUG :: Received from STM32: ACK
+2024-02-21 00:54:15,834 :: INFO :: Connected to STM32
+2024-02-21 00:54:16,842 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:54:16,842 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:16,843 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:16,843 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:16,844 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:16,849 :: DEBUG :: Received from STM32: ACK
+2024-02-21 00:54:41,619 :: INFO :: Connected to STM32
+2024-02-21 00:54:42,625 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:54:42,626 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:42,626 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:42,626 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:42,626 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:42,632 :: DEBUG :: Received from STM32: ACK
+2024-02-21 00:54:46,362 :: INFO :: Connected to STM32
+2024-02-21 00:54:47,369 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:54:47,370 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:47,371 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:47,372 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:47,372 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:54:47,378 :: DEBUG :: Received from STM32: ACK
+2024-02-21 00:56:44,639 :: INFO :: Connected to STM32
+2024-02-21 00:56:45,646 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:56:45,646 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:56:45,646 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:56:45,647 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:56:45,647 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:56:45,653 :: DEBUG :: Received from STM32: ACK
+2024-02-21 00:56:49,466 :: INFO :: Connected to STM32
+2024-02-21 00:56:50,473 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:56:50,474 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:56:50,474 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:56:50,474 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:56:50,475 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:56:50,480 :: DEBUG :: Received from STM32: ACK
+2024-02-21 00:57:53,126 :: INFO :: Connected to STM32
+2024-02-21 00:57:54,134 :: DEBUG :: Sent to STM32: L
+2024-02-21 00:57:54,134 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:57:54,135 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:57:54,135 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:57:54,135 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:57:54,141 :: DEBUG :: Received from STM32: ACK
+2024-02-21 00:58:04,136 :: DEBUG :: Sent to STM32: T
+2024-02-21 00:58:04,137 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:58:04,137 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:58:04,138 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:58:04,138 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:58:04,144 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 00:59:02,972 :: INFO :: Connected to STM32
+2024-02-21 00:59:03,979 :: DEBUG :: Sent to STM32: L
+2024-02-21 00:59:03,980 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:59:03,981 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:59:03,981 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:59:03,982 :: DEBUG :: Sent to STM32: F
+2024-02-21 00:59:03,988 :: DEBUG :: Received from STM32: ACK
+2024-02-21 00:59:13,983 :: DEBUG :: Sent to STM32: T
+2024-02-21 00:59:13,983 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:59:13,984 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:59:13,985 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:59:13,985 :: DEBUG :: Sent to STM32: S
+2024-02-21 00:59:13,991 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 01:00:30,666 :: INFO :: Connected to STM32
+2024-02-21 01:00:31,674 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:00:31,674 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:00:31,674 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:00:31,675 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:00:31,675 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:00:31,681 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:00:51,676 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:00:51,676 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:00:51,677 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:00:51,678 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:00:51,678 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:00:51,685 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 01:01:21,838 :: INFO :: Connected to STM32
+2024-02-21 01:01:22,848 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:01:22,848 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:01:22,849 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:01:22,850 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:01:42,850 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:01:42,851 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:01:42,852 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:01:42,853 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:01:42,854 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:01:42,856 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:02:31,995 :: INFO :: Connected to STM32
+2024-02-21 01:02:33,004 :: DEBUG :: Sent to STM32: W
+2024-02-21 01:02:33,004 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:02:33,004 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:02:33,005 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:02:33,005 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:02:33,011 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:02:53,006 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:02:53,007 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:02:53,007 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:02:53,008 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:02:53,009 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:02:53,015 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 01:03:21,593 :: INFO :: Connected to STM32
+2024-02-21 01:03:22,601 :: DEBUG :: Sent to STM32: W
+2024-02-21 01:03:22,602 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:03:22,603 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:03:22,603 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:03:22,603 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:03:22,609 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:03:27,604 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:03:27,605 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:03:27,606 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:03:27,606 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:03:27,607 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:03:27,613 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 01:04:27,416 :: INFO :: Connected to STM32
+2024-02-21 01:04:28,424 :: DEBUG :: Sent to STM32: W
+2024-02-21 01:04:28,425 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:04:28,425 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:04:28,426 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:04:28,426 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:04:28,432 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:04:33,426 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,427 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,427 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,428 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,428 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,428 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,428 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,429 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,429 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,429 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,429 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,429 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,430 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,430 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,430 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,430 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,430 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,431 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,431 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,431 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,431 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,432 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,432 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,432 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,432 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,432 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,433 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,433 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,433 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,434 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,434 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 01:04:33,434 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,434 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,434 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,435 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,435 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,435 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,436 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,436 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,436 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:04:33,436 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:30,664 :: INFO :: Connected to STM32
+2024-02-21 01:05:31,674 :: DEBUG :: Sent to STM32: W
+2024-02-21 01:05:31,675 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:05:31,675 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:05:31,676 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:05:31,676 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:05:36,676 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,677 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,677 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,678 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,678 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,678 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,679 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,679 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,679 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,680 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,680 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,680 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,684 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,684 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,685 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,685 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,685 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,686 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,686 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,686 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,686 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,687 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,687 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,687 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,688 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,688 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,688 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,688 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,689 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,689 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,689 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,690 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,690 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,690 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,691 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,691 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,692 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,692 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,692 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:05:36,693 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:06:06,409 :: INFO :: Disconnected from STM32
+2024-02-21 01:06:14,779 :: INFO :: Connected to STM32
+2024-02-21 01:06:15,788 :: DEBUG :: Sent to STM32: W
+2024-02-21 01:06:15,788 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:06:15,789 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:06:15,789 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:06:15,789 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:06:15,795 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:06:47,105 :: INFO :: Connected to STM32
+2024-02-21 01:06:48,115 :: DEBUG :: Sent to STM32: W
+2024-02-21 01:06:48,116 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:06:48,116 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:06:48,116 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:06:48,117 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:06:48,122 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:08:05,164 :: INFO :: Connected to STM32
+2024-02-21 01:08:06,172 :: DEBUG :: Sent to STM32: W
+2024-02-21 01:08:06,172 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:08:06,173 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:08:06,173 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:08:06,173 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:08:06,179 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:08:45,309 :: INFO :: Connected to STM32
+2024-02-21 01:08:46,317 :: DEBUG :: Sent to STM32: W
+2024-02-21 01:08:46,317 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:08:46,317 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:08:46,318 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:08:46,318 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:08:46,324 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:09:41,467 :: INFO :: Connected to STM32
+2024-02-21 01:09:42,475 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:09:42,476 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:09:42,476 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:09:42,477 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:09:42,477 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:09:42,477 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:09:42,483 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:10:40,665 :: INFO :: Connected to STM32
+2024-02-21 01:10:41,673 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:10:41,674 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:10:41,674 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:10:41,675 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:10:41,675 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:10:41,676 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:10:41,681 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:11:15,429 :: INFO :: Connected to STM32
+2024-02-21 01:11:16,437 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:11:16,437 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:11:16,438 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:11:16,439 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:11:16,439 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:11:16,440 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:11:16,445 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:11:19,441 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:11:19,441 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:11:19,442 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:11:19,442 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:11:19,442 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:11:19,448 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 01:13:36,321 :: INFO :: Connected to STM32
+2024-02-21 01:13:37,330 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:13:37,331 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:13:37,331 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:13:37,332 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:13:37,332 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:13:37,332 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:13:40,333 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:40,334 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:40,335 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:40,335 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:40,336 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:51,814 :: INFO :: Disconnected from STM32
+2024-02-21 01:13:54,958 :: INFO :: Connected to STM32
+2024-02-21 01:13:55,967 :: DEBUG :: Sent to STM32: FW
+2024-02-21 01:13:55,967 :: DEBUG :: Sent to STM32: FW
+2024-02-21 01:13:55,968 :: DEBUG :: Sent to STM32: FW
+2024-02-21 01:13:55,968 :: DEBUG :: Sent to STM32: FW
+2024-02-21 01:13:55,969 :: DEBUG :: Sent to STM32: FW
+2024-02-21 01:13:58,969 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:58,969 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:58,970 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:58,970 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:13:58,970 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:14:09,999 :: INFO :: Disconnected from STM32
+2024-02-21 01:14:11,114 :: INFO :: Connected to STM32
+2024-02-21 01:14:12,122 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:14:12,122 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:14:12,122 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:14:12,123 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:14:12,123 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:14:12,129 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:14:15,124 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:14:15,124 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:14:15,125 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:14:15,125 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:14:15,125 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:14:15,131 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 01:15:36,395 :: INFO :: Connected to STM32
+2024-02-21 01:15:37,403 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:15:42,404 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:15:42,404 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:15:42,405 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:15:42,405 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:15:42,405 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:15:51,213 :: INFO :: Disconnected from STM32
+2024-02-21 01:16:07,571 :: INFO :: Connected to STM32
+2024-02-21 01:16:08,578 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:16:08,579 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:16:13,580 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:13,580 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:13,581 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:13,581 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:13,582 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:16,404 :: INFO :: Disconnected from STM32
+2024-02-21 01:16:30,091 :: INFO :: Connected to STM32
+2024-02-21 01:16:31,100 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:16:31,100 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:16:36,101 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:36,102 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:36,102 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:36,103 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:36,103 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:16:36,108 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:36:03,959 :: INFO :: Connected to STM32
+2024-02-21 01:36:04,967 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:36:04,967 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:36:04,968 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:36:04,968 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:36:04,968 :: DEBUG :: Sent to STM32: F
+2024-02-21 01:36:04,977 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:36:09,969 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:36:09,969 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:36:09,970 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:36:09,970 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:36:09,970 :: DEBUG :: Sent to STM32: S
+2024-02-21 01:41:31,178 :: INFO :: Connected to STM32
+2024-02-21 01:41:32,185 :: DEBUG :: Sent to STM32: FW5..
+2024-02-21 01:41:32,194 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:41:37,186 :: DEBUG :: Sent to STM32: Sxxxx
+2024-02-21 01:42:10,156 :: INFO :: Connected to STM32
+2024-02-21 01:42:11,165 :: DEBUG :: Sent to STM32: FW5..
+2024-02-21 01:42:11,174 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:43:11,780 :: INFO :: Connected to STM32
+2024-02-21 01:43:12,788 :: DEBUG :: Sent to STM32: FW2..
+2024-02-21 01:43:12,797 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:43:22,789 :: DEBUG :: Sent to STM32: Sxxxx
+2024-02-21 01:44:57,655 :: INFO :: Connected to STM32
+2024-02-21 01:44:58,663 :: DEBUG :: Sent to STM32: FL3xx
+2024-02-21 01:44:58,672 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:45:08,664 :: DEBUG :: Sent to STM32: Sxxxx
+2024-02-21 01:46:43,595 :: INFO :: Connected to STM32
+2024-02-21 01:46:44,602 :: DEBUG :: Sent to STM32: FL3xx
+2024-02-21 01:46:44,611 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:46:54,603 :: DEBUG :: Sent to STM32: SWxxx
+2024-02-21 01:47:23,344 :: INFO :: Connected to STM32
+2024-02-21 01:47:24,352 :: DEBUG :: Sent to STM32: FL3xx
+2024-02-21 01:47:24,361 :: DEBUG :: Received from STM32: ACK
+2024-02-21 01:47:26,353 :: DEBUG :: Sent to STM32: xWxxx
+2024-02-21 01:47:26,353 :: DEBUG :: Sent to STM32: Sxxxx
+2024-02-21 01:47:26,362 :: DEBUG :: Received from STM32:  ACK
+2024-02-21 01:47:54,189 :: INFO :: Connected to STM32
+2024-02-21 01:47:55,198 :: DEBUG :: Sent to STM32: FL3xx
+2024-02-21 01:47:57,199 :: DEBUG :: Sent to STM32: xWxxx
+2024-02-21 01:47:57,300 :: DEBUG :: Sent to STM32: Sxxxx
+2024-02-21 01:48:12,130 :: INFO :: Disconnected from STM32
+2024-02-21 01:48:12,765 :: INFO :: Connected to STM32
+2024-02-21 01:48:13,773 :: DEBUG :: Sent to STM32: FL3xx
+2024-02-21 01:48:15,774 :: DEBUG :: Sent to STM32: xWxxx
+2024-02-21 01:48:15,875 :: DEBUG :: Sent to STM32: SSxxx
+2024-02-21 01:48:24,800 :: INFO :: Disconnected from STM32
+2024-02-21 01:48:25,540 :: INFO :: Connected to STM32
+2024-02-21 01:48:26,548 :: DEBUG :: Sent to STM32: FL3xx
+2024-02-21 01:48:28,548 :: DEBUG :: Sent to STM32: SWxxx
+2024-02-21 01:48:28,649 :: DEBUG :: Sent to STM32: SSxxx
+2024-02-21 01:48:33,550 :: INFO :: Disconnected from STM32
+2024-02-21 01:48:36,051 :: INFO :: Connected to STM32
+2024-02-21 01:48:37,060 :: DEBUG :: Sent to STM32: FL3xx
+2024-02-21 01:48:42,061 :: DEBUG :: Sent to STM32: SWxxx
+2024-02-21 01:48:42,162 :: DEBUG :: Sent to STM32: SSxxx
+2024-02-21 01:49:07,991 :: INFO :: Disconnected from STM32
+2024-02-21 01:49:10,329 :: INFO :: Connected to STM32
+2024-02-21 01:49:11,338 :: DEBUG :: Sent to STM32: FL3xx
+2024-02-21 01:49:13,338 :: DEBUG :: Sent to STM32: SWxxx
+2024-02-21 01:49:13,439 :: DEBUG :: Sent to STM32: SSSSS
+2024-02-21 01:49:17,457 :: INFO :: Disconnected from STM32

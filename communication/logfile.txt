@@ -1,0 +1,6 @@
+2024-02-15 03:26:52,018 :: INFO :: Connected to STM32
+2024-02-15 03:26:52,026 :: DEBUG :: Sent to STM32: FW--
+2024-02-15 03:27:05,956 :: INFO :: Disconnected from STM32
+2024-02-15 03:27:13,033 :: INFO :: Connected to STM32
+2024-02-15 03:27:13,041 :: DEBUG :: Sent to STM32: FW--
+2024-02-15 03:29:38,857 :: INFO :: Disconnected from STM32
