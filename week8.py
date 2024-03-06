@@ -203,7 +203,7 @@ class RaspberryPi:
                         self.stm_link.send("RS00")
                         # Main trigger to start movement #
                         self.unpause.set()
-                        self.logger.info(
+                        self.logger.infoserial.serialutil.SerialException: device reports readiness to read but returned no data(
                             "Start command received, starting robot on path!")
                         self.android_queue.put(AndroidMessage(
                             'info', 'Starting robot on path!'))

@@ -213,11 +213,9 @@ class RaspberryPi:
                         self.android_queue.put(AndroidMessage(
                             "error", "Command queue is empty, did you set obstacles?"))
             elif message['cat'] == 'info':
-                if message['value'] == '11111':
-                    self.logger.info("Sending forward movement for fun")
-                    for i in range(5):
-                        self.stm_link.send("1")
-                    self.logger.info("Movement sent")
+                self.logger.info("Sending forward movement for fun")
+                self.stm_link.send(message['value'])
+                self.logger.info("Movement sent")
 
                     
     def recv_stm(self) -> None:

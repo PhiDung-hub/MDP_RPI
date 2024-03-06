@@ -1,0 +1,221 @@
+import time
+import logging
+from multiprocessing import Process, Manager
+from communication.stm32 import STMLink
+import sys
+import json
+import os
+import requests
+from consts import SYMBOL_MAP
+from settings import API_IP, API_PORT
+from ultralytics import YOLO
+# import subprocess
+import numpy as np
+import cv2
+import math
+import os
+
+# Initialize the YOLOv5 model
+model = YOLO("best.pt")
+
+# Object classes
+classNames = ["arrow-bullseye", "bullseye-arrow", "bullseye-arrow-bullseye", "id11", "id12", "id13", "id14", "id15", "id16", "id17", "id18", "id19",
+              "id20", "id21", "id22", "id23", "id24", "id25", "id26", "id27", "id28", "id29", "id30", "id31", "id32", "id33", "id34", "id35", "id36",
+              "id37", "id38", "id39", "id40", "id99"]
+
+lock_tables = {
+    "ACK": 0,
+    "FWACK": 1,
+    "FLACK": 2,
+    "FRACK": 3,
+    "BWACK": 4,
+    "BLACK": 5,
+    "BRACK": 6,
+    "SSACK": 0
+}
+
+def capture_image(filename):
+    os.system(f"libcamera-still -e jpg -n -t 500 -o {filename} --awb auto > /dev/null 2>&1")
+
+class RaspberryPi:
+    """
+    Class that represents the Raspberry Pi.
+    """
+    def __init__(self):
+        """
+        Initializes the Raspberry Pi.
+        """
+        self.stm_link = STMLink()
+        self.manager = Manager()
+        self.movement_lock = self.manager.Value('i', 0)  # Using Value as a flag
+
+        # Initialize logger
+        self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(logging.DEBUG)
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        ch = logging.StreamHandler()
+        ch.setFormatter(formatter)
+        self.logger.addHandler(ch)
+
+        self.proc_recv_stm32 = None
+
+    def start(self):
+        """Starts the RPi orchestrator"""
+        try:
+            self.stm_link.connect()
+            self.proc_recv_stm32 = Process(target=self.recv_stm)
+
+            self.proc_recv_stm32.start()
+            self.logger.info("Child Process started")
+
+
+            #### Unit test image rec ####
+            # while True:
+            #     self.snap_and_rec("14_15")
+
+            self.move("FR000")
+            time.sleep(5)
+            #### Unit test movement ####
+            self.move("FW020")
+            time.sleep(5)
+            self.move("FR000")
+            time.sleep(5)
+            self.move("FL000")
+            time.sleep(5)
+            self.move("BL000")
+
+        except KeyboardInterrupt:
+            self.stop()
+
+    def stop(self):
+        """Stops all processes on the RPi and disconnects gracefully with STM32"""
+        self.stm_link.disconnect()
+
+    def recv_stm(self) -> None:
+        """
+        [Child Process] Receive acknowledgement messages from STM32, and release the movement lock
+        """
+        while True:
+            message: str = self.stm_link.recv() or ""
+
+            if message.endswith("ACK"):
+                self.movement_lock.value = lock_tables[message]  # Release the lock
+                if message == "ACK":
+                    self.logger.debug("Last instruction completed")
+
+    def move(self, cmd):
+        """
+        Moves the robot forward by sending commands to the STM32
+        """
+        # Acquire movement lock before sending command
+        while self.movement_lock.value != 0:
+            pass
+
+        self.stm_link.send(f"{cmd}")
+        self.movement_lock.value = lock_tables[f"{cmd[:2]}ACK"]  # Lock until receive message complete
+
+        # NOTE: break if the above time out
+
+        # while self.movement_lock.value != lock_tables["ACK"]:
+        #     pass
+
+        # self.stm_link.send(f"SSSSS")
+
+
+    def snap_and_rec(self, obstacle_id_with_signal: str) -> None:
+        """
+        RPi snaps an image and calls the API for image-rec.
+        The response is then forwarded back to the android
+        :param obstacle_id_with_signal: the current obstacle ID followed by underscore followed by signal
+        """
+        # Lock the robot
+        self.movement_lock.value == 1
+
+        obstacle_id, signal = obstacle_id_with_signal.split("_")
+        self.logger.info(f"Capturing image for obstacle id: {obstacle_id}")
+        filename = f"{obstacle_id}_{signal}.jpg"
+
+        capture_image(filename)
+        self.logger.debug("Detecting image...")
+
+        # Read the captured image
+        img = cv2.imread(filename)
+        results = model(img, stream=True)
+
+        # release lock so that bot can continue moving
+        self.movement_lock.value == 0
+
+        # Coordinates
+        for r in results:
+            boxes = r.boxes
+            for box in boxes:
+                # Bounding box
+                x1, y1, x2, y2 = box.xyxy[0]
+                x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)  # Convert to int values
+                # Confidence
+                confidence = math.ceil((box.conf[0] * 100)) / 100
+                print("Confidence --->", confidence)
+
+                # Class name
+                cls = int(box.cls[0])
+                if cls == 38:
+                    cls = 39
+                elif cls == 39:
+                    cls = 38
+                print("Class name -->", classNames[cls])
+
+
+        self.logger.info(f"results: {results}")
+
+
+# Function to perform object detection on captured image
+def detect_objects_in_image():
+    # Read the captured image
+    img = cv2.imread("image.jpg")
+
+    # Perform object detection
+    results = model(img, stream=True)
+
+    # Coordinates
+    for r in results:
+        boxes = r.boxes
+
+        for box in boxes:
+            # Bounding box
+            x1, y1, x2, y2 = box.xyxy[0]
+            x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)  # Convert to int values
+
+            # Draw box on the image
+            cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 255), 3)
+
+            # Confidence
+            confidence = math.ceil((box.conf[0] * 100)) / 100
+            print("Confidence --->", confidence)
+
+            # Class name
+            cls = int(box.cls[0])
+            if cls == 38:
+                cls = 39
+            elif cls == 39:
+                cls = 38
+            print("Class name -->", classNames[cls])
+
+            # Object details
+            org = [x1, y1]
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            fontScale = 7
+            color = (0, 255, 0)
+            thickness = 12
+
+            cv2.putText(img, classNames[cls], org, font, fontScale, color, thickness)
+
+    # Show the image
+    cv2.imshow('Image', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+
+if __name__ == "__main__":
+    rpi = RaspberryPi()
+    rpi.start()
+

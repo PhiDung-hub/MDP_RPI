@@ -8,12 +8,40 @@ import os
 import requests
 from consts import SYMBOL_MAP
 from settings import API_IP, API_PORT
+from ultralytics import YOLO
+# import subprocess
+import numpy as np
+import cv2
+import math
+import os
+
+# Initialize the YOLOv5 model
+# model = YOLO("best.pt")
+model = None
+
+# Object classes
+classNames = ["arrow-bullseye", "bullseye-arrow", "bullseye-arrow-bullseye", "id11", "id12", "id13", "id14", "id15", "id16", "id17", "id18", "id19",
+              "id20", "id21", "id22", "id23", "id24", "id25", "id26", "id27", "id28", "id29", "id30", "id31", "id32", "id33", "id34", "id35", "id36",
+              "id37", "id38", "id39", "id40", "id99"]
+
+lock_tables = {
+    "ACK": 0,
+    "FWACK": 1,
+    "FLACK": 2,
+    "FRACK": 3,
+    "BWACK": 4,
+    "BLACK": 5,
+    "BRACK": 6,
+    "SSACK": 0
+}
+
+def capture_image(filename):
+    os.system(f"libcamera-still -e jpg -n -t 500 -o {filename} --awb auto > /dev/null 2>&1")
 
 class RaspberryPi:
     """
     Class that represents the Raspberry Pi.
     """
-
     def __init__(self):
         """
         Initializes the Raspberry Pi.
@@ -21,7 +49,6 @@ class RaspberryPi:
         self.stm_link = STMLink()
         self.manager = Manager()
         self.movement_lock = self.manager.Value('i', 0)  # Using Value as a flag
-        self.current_location = self.manager.dict()
 
         # Initialize logger
         self.logger = logging.getLogger(__name__)
@@ -31,28 +58,40 @@ class RaspberryPi:
         ch.setFormatter(formatter)
         self.logger.addHandler(ch)
 
-        self.rpi_action_queue = self.manager.Queue()
-        # Messages that need to be processed by STM32, as well as snap commands
-        self.command_queue = self.manager.Queue()
-        # X,Y,D coordinates of the robot after execution of a command
-        self.path_queue = self.manager.Queue()
-
         self.proc_recv_stm32 = None
-        self.rs_flag = False
-        self.success_obstacles = self.manager.list()
-        self.failed_obstacles = self.manager.list()
-        self.obstacles = self.manager.dict()
 
-    def start(self, t):
+    def start(self):
         """Starts the RPi orchestrator"""
         try:
             self.stm_link.connect()
             self.proc_recv_stm32 = Process(target=self.recv_stm)
+
             self.proc_recv_stm32.start()
             self.logger.info("Child Process started")
 
-            ### Start up complete ###
-            self.move_forward(t)
+
+            for _ in range(int(sys.argv[1])):
+                #### Unit test image rec ####
+                # while True:
+                # self.snap_and_rec("14_15")
+
+                self.move("FW025")
+                time.sleep(5)
+
+                self.move("FR000")
+                time.sleep(3)
+                self.move("FL000")
+                time.sleep(8)
+                self.stm_link.send("FW020")
+                time.sleep(1)
+                self.stm_link.send("SSSSS")
+                self.movement_lock.value = 0
+                time.sleep(3)
+                self.move("BR000")
+                time.sleep(3)
+
+            self.move(f"FW0{int(sys.argv[2])}0")
+            time.sleep(5)
 
         except KeyboardInterrupt:
             self.stop()
@@ -67,36 +106,30 @@ class RaspberryPi:
         """
         while True:
             message: str = self.stm_link.recv() or ""
-            print(message)
-            if message.startswith("ACK"):
-                self.movement_lock.value = 0  # Release the lock
-                self.logger.debug("ACK from STM32 received, movement lock released.")
-            else:
-                self.logger.warning(f"Ignored unknown message from STM: {message}")
 
-    def move_forward(self, t):
+            if message.endswith("ACK"):
+                self.movement_lock.value = lock_tables[message]  # Release the lock
+                if message == "ACK":
+                    self.logger.debug("Last instruction completed")
+
+    def move(self, cmd):
         """
         Moves the robot forward by sending commands to the STM32
         """
         # Acquire movement lock before sending command
-        while True:
-            if self.movement_lock.value == 0:  # Check if lock is released
-                self.movement_lock.value = 1  # Acquire the lock
-                break
-            time.sleep(0.1)  # Wait for a short while before checking again
-        # Send forward command to STM32
-        time.sleep(1)
-        self.stm_link.send("FL3xx")
-        time.sleep(t)
-        self.stm_link.send("SWxxx")
-        time.sleep(0.1)
-        self.stm_link.send("SSSSS")
-        # Wait for acknowledgement from STM32
-        while self.movement_lock.value == 1:  # Wait until the lock is released
-            time.sleep(0.1)
-        # After receiving acknowledgement, update location
-        self.current_location['x'] += 1  # Assuming x-coordinate increment by 1 for simplicity
-        self.logger.info(f"Robot moved forward. New location: {self.current_location}")
+        while self.movement_lock.value != 0:
+            pass
+
+        self.stm_link.send(f"{cmd}")
+        self.movement_lock.value = lock_tables[f"{cmd[:2]}ACK"]  # Lock until receive message complete
+
+        # NOTE: break if the above time out
+
+        #while self.movement_lock.value != lock_tables["ACK"]:
+        #    pass
+
+        #self.stm_link.send(f"SSSSS")
+
 
     def snap_and_rec(self, obstacle_id_with_signal: str) -> None:
         """
@@ -104,69 +137,94 @@ class RaspberryPi:
         The response is then forwarded back to the android
         :param obstacle_id_with_signal: the current obstacle ID followed by underscore followed by signal
         """
+        # Lock the robot
+        self.movement_lock.value == 1
+
         obstacle_id, signal = obstacle_id_with_signal.split("_")
         self.logger.info(f"Capturing image for obstacle id: {obstacle_id}")
-        url = f"http://{API_IP}:{API_PORT}/image"
-        filename = f"{int(time.time())}_{obstacle_id}_{signal}.jpg"
+        filename = f"{obstacle_id}_{signal}.jpg"
 
+        capture_image(filename)
+        self.logger.debug("Detecting image...")
 
-        awbs = ['off', 'auto', 'incandescent', 'tungsten',
-                'fluorescent', 'indoor', 'daylight', 'cloudy']
-
-        awb = 2
-        retry_count = 0
-
-        while True:
-            retry_count += 1
-
-            rpistr = "libcamera-still -e jpg -n -t 500 -o " + filename
-            rpistr += " --awb " + awbs[awb]
-            # rpistr += " --metadata - --metadata-format txt >> PiLibtext.txt"
-
-            os.system(rpistr)
-
-            self.logger.debug("Requesting from image API")
-
-            response = requests.post(
-                url, files={"file": (filename, open(filename, 'rb'))})
-
-            if response.status_code != 200:
-                self.logger.error(
-                    "Something went wrong when requesting path from image-rec API. Please try again.")
-                return
-
-            results = json.loads(response.content)
-
-            # Higher brightness retry
-
-            if results['image_id'] != 'NA' or retry_count > 6:
-                break
-            else:
-                self.logger.info(f"Image recognition results: {results}")
-                self.logger.info("Retrying ...")
+        # Read the captured image
+        img = cv2.imread(filename)
+        results = model(img, stream=True)
 
         # release lock so that bot can continue moving
         self.movement_lock.value == 0
 
-        self.logger.info(f"results: {results}")
-        self.logger.info(f"self.obstacles: {self.obstacles}")
-        self.logger.info(
-            f"Image recognition results: {results} ({SYMBOL_MAP.get(results['image_id'])})")
+        # Coordinates
+        for r in results:
+            boxes = r.boxes
+            for box in boxes:
+                # Bounding box
+                x1, y1, x2, y2 = box.xyxy[0]
+                x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)  # Convert to int values
+                # Confidence
+                confidence = math.ceil((box.conf[0] * 100)) / 100
+                print("Confidence --->", confidence)
 
-        if results['image_id'] == 'NA':
-            self.failed_obstacles.append(
-                self.obstacles[int(results['obstacle_id'])])
-            self.logger.info(
-                f"Added Obstacle {results['obstacle_id']} to failed obstacles.")
-            self.logger.info(f"self.failed_obstacles: {self.failed_obstacles}")
-        else:
-            self.success_obstacles.append(
-                self.obstacles[int(results['obstacle_id'])])
-            self.logger.info(
-                f"self.success_obstacles: {self.success_obstacles}")
+                # Class name
+                cls = int(box.cls[0])
+                if cls == 38:
+                    cls = 39
+                elif cls == 39:
+                    cls = 38
+                print("Class name -->", classNames[cls])
+
+
+        self.logger.info(f"results: {results}")
+
+
+# Function to perform object detection on captured image
+def detect_objects_in_image():
+    # Read the captured image
+    img = cv2.imread("image.jpg")
+
+    # Perform object detection
+    results = model(img, stream=True)
+
+    # Coordinates
+    for r in results:
+        boxes = r.boxes
+
+        for box in boxes:
+            # Bounding box
+            x1, y1, x2, y2 = box.xyxy[0]
+            x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)  # Convert to int values
+
+            # Draw box on the image
+            cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 255), 3)
+
+            # Confidence
+            confidence = math.ceil((box.conf[0] * 100)) / 100
+            print("Confidence --->", confidence)
+
+            # Class name
+            cls = int(box.cls[0])
+            if cls == 38:
+                cls = 39
+            elif cls == 39:
+                cls = 38
+            print("Class name -->", classNames[cls])
+
+            # Object details
+            org = [x1, y1]
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            fontScale = 7
+            color = (0, 255, 0)
+            thickness = 12
+
+            cv2.putText(img, classNames[cls], org, font, fontScale, color, thickness)
+
+    # Show the image
+    cv2.imshow('Image', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
 
 if __name__ == "__main__":
-    t = float(sys.argv[1])
     rpi = RaspberryPi()
-    rpi.start(t)
+    rpi.start()
 

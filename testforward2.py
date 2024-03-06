@@ -68,12 +68,16 @@ class RaspberryPi:
                 break
             time.sleep(0.1)  # Wait for a short while before checking again
         # Send forward command to STM32
-        time.sleep(1)
+        time.sleep(1)   
         
-        self.stm_link.send("FW2..")
-        time.sleep(float(sys.argv[1]))
-        self.stm_link.send("Sxxxx")
+        self.stm_link.send("FR180")
 
+        #self.stm_link.send("FW...")
+
+        # time.sleep(float(sys.argv[1]))
+        # self.stm_link.send("Sxxxx")
+        #time.sleep(3)
+        #self.stm_link.send("SSSSS")
         # Wait for acknowledgement from STM32
         while self.movement_lock.value == 1:  # Wait until the lock is released
             time.sleep(0.1)
