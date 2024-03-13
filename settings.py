@@ -4,6 +4,7 @@ BAUD_RATE = 115200
 
 # API DETAILS
 API_IP = '192.168.32.65'  # IP address of laptop
+# API_IP = 'localhost'  # IP address of laptop
 API_PORT = 5000
 
 # ROBOT SETTINGS
