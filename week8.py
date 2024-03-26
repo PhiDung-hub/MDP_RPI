@@ -69,6 +69,7 @@ class RaspberryPi:
         self.proc_command_follower = None
         self.proc_rpi_action = None
         self.rs_flag = False
+
         self.success_obstacles = self.manager.list()
         self.failed_obstacles = self.manager.list()
         self.obstacles = self.manager.dict()
@@ -188,32 +189,31 @@ class RaspberryPi:
                     f"Set obstacles PiAction added to queue: {message}")
 
             ## Command: Start Moving ##
-            elif message['cat'] == "control":
-                if message['value'] == "start":
-                    # Check API
-                    if not self.check_api():
-                        self.logger.error(
-                            "API is down! Start command aborted.")
-                        self.android_queue.put(AndroidMessage(
-                            'error', "API is down, start command aborted."))
+            if message == "START":
+                # Check API
+                if not self.check_api():
+                    self.logger.error(
+                        "API is down! Start command aborted.")
+                    self.android_queue.put(AndroidMessage(
+                        'error', "API is down, start command aborted."))
 
-                    # Commencing path following
-                    if not self.command_queue.empty():
-                        self.logger.info("Gryo reset!")
-                        self.stm_link.send("RS00")
-                        # Main trigger to start movement #
-                        self.unpause.set()
-                        self.logger.infoserial.serialutil.SerialException: device reports readiness to read but returned no data(
-                            "Start command received, starting robot on path!")
-                        self.android_queue.put(AndroidMessage(
-                            'info', 'Starting robot on path!'))
-                        self.android_queue.put(
-                            AndroidMessage('status', 'running'))
-                    else:
-                        self.logger.warning(
-                            "The command queue is empty, please set obstacles.")
-                        self.android_queue.put(AndroidMessage(
-                            "error", "Command queue is empty, did you set obstacles?"))
+                # Commencing path following
+                if not self.command_queue.empty():
+                    self.logger.info("Gryo reset!")
+                    self.stm_link.send("RS00")
+                    # Main trigger to start movement #
+                    self.unpause.set()
+                    self.logger.infoserial.serialutil.SerialException(
+                        "Start command received, starting robot on path!")
+                    self.android_queue.put(AndroidMessage(
+                        'info', 'Starting robot on path!'))
+                    self.android_queue.put(
+                        AndroidMessage('status', 'running'))
+                else:
+                    self.logger.warning(
+                        "The command queue is empty, please set obstacles.")
+                    self.android_queue.put(AndroidMessage(
+                        "error", "Command queue is empty, did you set obstacles?"))
 
     def recv_stm(self) -> None:
         """
@@ -525,10 +525,10 @@ class RaspberryPi:
 
         # Put commands and paths into respective queues
         self.clear_queues()
-        for c in commands:
-            self.command_queue.put(c)
-        for p in path[1:]:  # ignore first element as it is the starting position of the robot
-            self.path_queue.put(p)
+        for command in commands:
+            self.command_queue.put(command)
+        for position in path[1:]:  # ignore first element as it is the starting position of the robot
+            self.path_queue.put(position)
 
         self.android_queue.put(AndroidMessage(
             "info", "Commands and path received Algo API. Robot is ready to move."))

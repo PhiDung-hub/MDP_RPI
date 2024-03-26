@@ -1,7 +1,7 @@
 import json
 import os
 import socket
-from typing import Optional
+from typing import Any, Optional
 import bluetooth
 from communication.link import Link
 
@@ -42,11 +42,11 @@ class AndroidMessage:
         Returns the message as a JSON string.
         :return: JSON string representation of the message.
         """
-        return json.dumps({'cat': self._cat, 'value': self._value})
+        return json.dumps({"cat": self._cat, "value": self._value})
 
 
 class AndroidLink(Link):
-    """Class for communicating with Android tablet over Bluetooth connection. 
+    """Class for communicating with Android tablet over Bluetooth connection.
 
     ## General Format
     Messages between the Android app and Raspi will be in the following format:
@@ -61,7 +61,7 @@ class AndroidLink(Link):
     - `image-rec`: image recognition results
     - `mode`: the current mode of the robot (`manual` or `path`)
     - `status`: status updates of the robot (`running` or `finished`)
-    - `obstacle`: list of obstacles 
+    - `obstacle`: list of obstacles
 
     ## Android to RPi
 
@@ -89,7 +89,7 @@ class AndroidLink(Link):
     {"cat": "error", "value": "Command queue is empty, did you set obstacles?"}
     ```
 
-    ### Image Recognition 
+    ### Image Recognition
 
     #### RPi to Android
     ```json
@@ -102,9 +102,6 @@ class AndroidLink(Link):
     {"cat": "location", "value": {"x": 1, "y": 1, "d": 0}}
     ```
     where `x`, `y` is the location of the robot, and `d` is its direction.
-
-
-
     """
 
     def __init__(self):
@@ -112,8 +109,8 @@ class AndroidLink(Link):
         Initialize the Bluetooth connection.
         """
         super().__init__()
-        self.client_sock = None
-        self.server_sock = None
+        self.client_sock: Any = None
+        self.server_sock: Any = None
 
     def connect(self):
         """
@@ -131,14 +128,18 @@ class AndroidLink(Link):
 
             # Parameters
             port = self.server_sock.getsockname()[1]
-            uuid = '94f39d29-7d6d-437d-973b-fba39e49d4ee'
+            uuid = "94f39d29-7d6d-437d-973b-fba39e49d4ee"
 
             # Advertise
-            bluetooth.advertise_service(self.server_sock, "MDP-Group2-RPi", service_id=uuid, service_classes=[
-                                        uuid, bluetooth.SERIAL_PORT_CLASS], profiles=[bluetooth.SERIAL_PORT_PROFILE])
+            bluetooth.advertise_service(
+                self.server_sock,
+                "MDP-Group32-RPi",
+                service_id=uuid,
+                service_classes=[uuid, bluetooth.SERIAL_PORT_CLASS],
+                profiles=[bluetooth.SERIAL_PORT_PROFILE],
+            )
 
-            self.logger.info(
-                f"Awaiting Bluetooth connection on RFCOMM CHANNEL {port}")
+            self.logger.info(f"Awaiting Bluetooth connection on {port}")
             self.client_sock, client_info = self.server_sock.accept()
             self.logger.info(f"Accepted connection from: {client_info}")
 
@@ -168,16 +169,15 @@ class AndroidLink(Link):
             self.logger.debug(f"Sent to Android: {message.jsonify}")
         except OSError as e:
             self.logger.error(f"Error sending message to Android: {e}")
-            raise e
+            pass
 
     def recv(self) -> Optional[str]:
         """Receive message from Android"""
         try:
             tmp = self.client_sock.recv(1024)
-            self.logger.debug(tmp)
             message = tmp.strip().decode("utf-8")
             self.logger.debug(f"Received from Android: {message}")
             return message
         except OSError as e:  # connection broken, try to reconnect
             self.logger.error(f"Error receiving message from Android: {e}")
-            raise e
+            return ""

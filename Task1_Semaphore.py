@@ -2,7 +2,8 @@
 
 import json
 import queue
-from multiprocessing import Process, Manager
+from multiprocessing import Process, Manager, Semaphore
+import time
 from typing import Optional
 import os
 import requests
@@ -50,6 +51,8 @@ class RaspberryPi:
         self.android_link = AndroidLink()
         self.manager = Manager()
 
+        self.lock_stm = Semaphore(1)
+        self.lock_stm.acquire()
         self.android_dropped = self.manager.Event()
         self.start_movement = self.manager.Event()
 
@@ -64,11 +67,11 @@ class RaspberryPi:
         # X,Y,D coordinates of the robot after execution of a command
         self.path_queue = self.manager.Queue()
 
-        self.proc_recv_android: Optional[Process] = None
-        self.proc_recv_stm32: Optional[Process] = None
-        self.proc_android_sender: Optional[Process] = None
-        self.proc_rpi_action: Optional[Process] = None
-        self.proc_command_follower: Optional[Process] = None
+        self.proc_recv_android = None
+        self.proc_recv_stm32 = None
+        self.proc_android_sender = None
+        self.proc_rpi_action = None
+        self.proc_command_follower = None
 
         self.success_obstacles = self.manager.list()
         self.failed_obstacles = self.manager.list()
@@ -107,13 +110,15 @@ class RaspberryPi:
 
             # Send success message to Android
             self.android_queue.put(AndroidMessage("info", "Robot is ready!"))
-            # self.reconnect_android()
+            self.reconnect_android()
 
         except KeyboardInterrupt:
             self.stop()
 
     def reconnect_android(self):
         """Handles the reconnection to Android in the event of a lost connection."""
+        self.logger.info("Reconnection handler is watching...")
+
         while True:
             self.android_dropped.wait()
             # Wait for android connection to drop
@@ -188,15 +193,20 @@ class RaspberryPi:
             ## Command: Set obstacles ##
             if message["cat"] == "obstacles":
                 self.action_queue.put(PiAction(**message))
+                # self.action_queue.put(PiAction(**message)) ## THIS SHOULD BE BELOW
                 self.logger.debug(f"Set obstacles PiAction added to queue: {message}")
 
+
             ## Command: Start Moving ##
-            if message == "START":
+            if message["cat"] == "control" and message["value"].upper() == "START":
                 # Commencing path following
                 if not self.command_queue.empty():
                     # Main trigger to start movement #
+                    time.sleep(3)
+                    self.lock_stm.release()
                     self.start_movement.set()
                     self.android_queue.put(AndroidMessage("info", "Starting robot!"))
+                    # self.request_algo(data=action.value)
                 else:
                     self.logger.warning("Empty obstacles")
                     self.android_queue.put(AndroidMessage("error", "Empty obstacles"))
@@ -204,7 +214,6 @@ class RaspberryPi:
     def rpi_action(self):
         # return
         while True:
-            self.start_movement.wait()
             action: PiAction = self.action_queue.get()
             self.logger.debug(
                 f"PiAction retrieved from queue: {action.cat} {action.value}"
@@ -212,7 +221,8 @@ class RaspberryPi:
             if action.cat == "obstacles":
                 for obs in action.value["obstacles"]:
                     self.obstacles[obs["id"]] = obs
-                self.request_algo(action.value)
+                print("Acions", action.value)
+                self.request_algo(action.value) ## THIS DOESN'T FEEL LIKE IT SHOULD BE HERE
             elif action.cat == "snap":
                 self.snap_and_rec(obstacle_id_with_signal=action.value)
             elif action.cat == "stitch":
@@ -220,8 +230,10 @@ class RaspberryPi:
 
     def stop(self):
         """Stops all processes on the RPi and disconnects gracefully with Android and STM32"""
+        self.android_link.disconnect()
         self.stm_link.disconnect()
         self.logger.info("Program exited!")
+        os._exit(911)
 
     def recv_stm(self) -> None:
         """
@@ -234,8 +246,8 @@ class RaspberryPi:
 
             self.logger.info(f"STM Callback message {message}")
 
-            if message == "ACK":
-                self.movement_lock.release()
+            if message.startswith("ACK"):
+                self.lock_stm.release()
                 self.logger.debug("ACK received, movement lock released.")
 
                 cur_location = self.path_queue.get_nowait()
@@ -265,61 +277,66 @@ class RaspberryPi:
         """
         while True:
             # Retrieve next movement command
-            command: str = self.command_queue.get()
-            # Wait for android start command [Main Trigger]
-            self.start_movement.wait()
+            if self.lock_stm.get_value() == 1:
+                self.lock_stm.acquire()
+                command: str = self.command_queue.get()
+                # Wait for android start command [Main Trigger]
+                # self.start_movement.wait() ### REMOVED THIS BECAUSE THIS IS NOT A VALID FUNCTION
+                # self.movement_lock.acquire()
+                # STM32 Commands - Send straight to STM32
+                stm32_prefixes = ("FW", "BW", "FL", "FR", "BL", "BR", "SS")
+                if command.startswith(stm32_prefixes):
+                    if command[:2] in ["FW", "BW", "FL", "FR", "BL", "BR"]:
+                        time.sleep(1)
+                    # self.movement_lock.acquire(blocking=True) # commented out this because we can do acquire on top
+                    self.stm_link.send(command)
+                    self.logger.debug(f"Sending movement command to STM32: {command}")
 
-            # STM32 Commands - Send straight to STM32
-            stm32_prefixes = ("FW", "BW", "FL", "FR", "BL", "BR", "SS")
-            if command.startswith(stm32_prefixes):
-                self.movement_lock.acquire(blocking=True)
-                self.stm_link.send(command)
-                self.logger.debug(f"Sending movement command to STM32: {command}")
-
-            # Snap command
-            elif command.startswith("SNAP"):
-                obstacle_id_with_signal = command.replace("SNAP", "")
-                self.action_queue.put(
-                    PiAction(cat="snap", value=obstacle_id_with_signal)
-                )
-
-            # End of path
-            elif command == "SSSSS":
-                self.logger.info(
-                    f"At FIN, self.failed_obstacles: {self.failed_obstacles}"
-                )
-                self.logger.info(
-                    f"At FIN, self.current_location: {self.current_location}"
-                )
-                if len(self.failed_obstacles) != 0 and self.failed_attempt == False:
-                    # NOTE: retrying
-                    new_obstacle_list = list(self.failed_obstacles)
-                    for obj in list(self.success_obstacles):
-                        # example: {'x': 5, 'y': 11, 'id': 1, 'd': 4}
-                        obj["d"] = 8
-                        new_obstacle_list.append(obj)
-
-                    self.logger.info("Attempting to go to failed obstacles")
-                    self.failed_attempt = True
-                    self.request_algo(
-                        {"obstacles": new_obstacle_list},
-                        self.current_location["x"],
-                        self.current_location["y"],
-                        self.current_location["d"],
-                        retrying=True,
+                # Snap command
+                elif command.startswith("SNAP"):
+                    obstacle_id_with_signal = command.replace("SNAP", "")
+                    self.action_queue.put(
+                        PiAction(cat="snap", value=obstacle_id_with_signal)
                     )
-                    self.movement_lock.release()
-                    continue
+                # End of path
+                elif command == "SSSSS":
+                    self.logger.info(
+                        f"At FIN, self.failed_obstacles: {self.failed_obstacles}"
+                    )
+                    self.logger.info(
+                        f"At FIN, self.current_location: {self.current_location}"
+                    )
+                    if len(self.failed_obstacles) != 0 and self.failed_attempt == False:
+                        # NOTE: retrying
+                        new_obstacle_list = list(self.failed_obstacles)
+                        for obj in list(self.success_obstacles):
+                            # example: {'x': 5, 'y': 11, 'id': 1, 'd': 4}
+                            obj["d"] = 8
+                            new_obstacle_list.append(obj)
 
-                self.start_movement.clear()
-                self.movement_lock.release()
-                self.logger.info("Commands queue finished.")
-                # self.android_queue.put(AndroidMessage(
-                #     "info", "Commands queue finished."))
-                # self.android_queue.put(AndroidMessage("status", "finished"))
-                # self.action_queue.put(PiAction(cat="stitch", value=""))
-            else:
-                raise Exception(f"Unknown command: {command}")
+                        self.logger.info("Attempting to go to failed obstacles")
+                        self.failed_attempt = True
+                        self.request_algo(
+                            {"obstacles": new_obstacle_list},
+                            self.current_location["x"],
+                            self.current_location["y"],
+                            self.current_location["d"],
+                            retrying=True,
+                        )
+                        # self.movement_lock.release()
+                        self.lock_stm.release()
+                        continue
+
+                    self.start_movement.clear()
+                    # self.movement_lock.release()
+                    self.lock_stm.release()
+                    self.logger.info("Commands queue finished.")
+                    # self.android_queue.put(AndroidMessage(
+                    #     "info", "Commands queue finished."))
+                    # self.android_queue.put(AndroidMessage("status", "finished"))
+                    # self.action_queue.put(PiAction(cat="stitch", value=""))
+                else:
+                    raise Exception(f"Unknown command: {command}")
 
     def capture_image(self, filename: str):
         os.system(
@@ -344,12 +361,14 @@ class RaspberryPi:
             self.logger.error(
                 "Something went wrong when requesting path from image-rec API. Please try again."
             )
+            self.lock_stm.release()
             return
 
         results = response.json()
 
         # release lock so that bot can continue moving
-        self.movement_lock.release()
+        # self.movement_lock.release()
+        self.lock_stm.release()
 
         self.logger.info(f"results: {results}")
         self.logger.info(f"Detected image id: {results['image_id']}")
@@ -367,7 +386,9 @@ class RaspberryPi:
             )
         )
 
-    def request_algo(self, data={}, robot_x=1, robot_y=1, robot_dir=0, retrying=False):
+    def request_algo(
+        self, data, robot_x=1, robot_y=1, robot_dir=0, retrying=False
+    ):
         """
         Requests for a series of commands and the path from the Algo API.
         The received commands and path are then queued in the respective queues
@@ -377,22 +398,22 @@ class RaspberryPi:
         self.logger.info(f"data: {data}")
 
         body = {
-            **data,
-            "big_turn": "0",
-            "robot_x": robot_x,
-            "robot_y": robot_y,
-            "robot_dir": robot_dir,
-            "retrying": retrying,
+           **data,
+           "big_turn": "0",
+           "robot_x": robot_x,
+           "robot_y": robot_y,
+           "robot_dir": robot_dir,
+           "retrying": retrying,
         }
         # body = {
-        #     "obstacles": [
-        #         {"x": 3, "y": 8, "id": 1, "d": 4},
-        #         {"x": 8, "y": 6, "id": 2, "d": 6},
-        #     ],
-        #     "robot_x": robot_x,
-        #     "robot_y": robot_y,
-        #     "robot_dir": 2,
-        #     "retrying": retrying,
+        #  "obstacles": [
+        #     {"x": 1, "y": 7, "id": 1, "d": 4},
+        #     {"x": 4, "y": 17, "id": 2, "d": 4},
+        #      ],
+        #    "robot_x": robot_x,
+        #    "robot_y": robot_y,
+        #    "robot_dir": 0,
+        #    "retrying": retrying,
         # }
         url = f"http://{API_IP}:{API_PORT}/path"
         response = requests.post(url, json=body)
@@ -419,6 +440,9 @@ class RaspberryPi:
         for p in path[1:]:
             self.path_queue.put(p)
 
+        # self.android_queue.put(AndroidMessage("info", "Commands and path received Algo API. Robot is ready to move."))
+        self.logger.info("Commands and path received Algo API. Robot is ready to move.")
+
     def request_stitch(self):
         """Sends a stitch request to the image recognition API to stitch the different images together"""
         url = f"http://{API_IP}:{API_PORT}/stitch"
@@ -427,7 +451,9 @@ class RaspberryPi:
         # If error, then log, and send error to Android
         if response.status_code != 200:
             # Notify android
-            self.logger.error("Stitch request from API failed.")
+            self.logger.error(
+                "Something went wrong when requesting stitch from the API."
+            )
             return
 
         self.logger.info("Images stitched!")
@@ -440,7 +466,11 @@ class RaspberryPi:
             self.path_queue.get()
 
     def check_api(self) -> bool:
-        """Check whether image recognition and algorithm API server is up and running"""
+        """Check whether image recognition and algorithm API server is up and running
+
+        Returns:
+            bool: True if running, False if not.
+        """
         # Check image recognition API
         url = f"http://{API_IP}:{API_PORT}/status"
         try:
@@ -463,12 +493,4 @@ class RaspberryPi:
 
 if __name__ == "__main__":
     rpi = RaspberryPi()
-    # rpi.request_algo()
-    # rpi.stm_link.connect()
-    # rpi.proc_recv_stm32 = Process(target=rpi.recv_stm)
-    # rpi.proc_recv_stm32.start()
-    # rpi.command_follower()
-
-    # rpi.proc_rpi_action = Process(target=rpi.rpi_action)
-    # rpi.proc_rpi_action.start()
     rpi.start()
